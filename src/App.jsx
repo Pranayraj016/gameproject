@@ -1,13 +1,15 @@
 import React from "react";
 import Home from "./Home/Home";
-import { Routes, Route } from "react-router-dom";
+import { Routes, Route, BrowserRouter } from "react-router-dom";
 
 function App() {
   return (
     <div>
-      <Routes>
-        <Route path="/" element={<Home />} />
-      </Routes>
+      <BrowserRouter basename="/gameproject">
+        <Routes>
+          <Route path="/" element={<Home />} />
+        </Routes>
+      </BrowserRouter>
     </div>
   );
 }
